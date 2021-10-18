@@ -633,6 +633,7 @@ GameObject:
   - component: {fileID: 897929528}
   - component: {fileID: 897929527}
   - component: {fileID: 897929526}
+  - component: {fileID: 897929529}
   m_Layer: 0
   m_Name: Ambulance
   m_TagString: Untagged
@@ -716,6 +717,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 897929524}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &897929529
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 897929524}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bfe560d751d854743937a25fdeaa0ddc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sound: "\xA1NI-no,Ni-no!"
 --- !u!1 &923836736
 GameObject:
   m_ObjectHideFlags: 0
@@ -1048,6 +1062,7 @@ GameObject:
   - component: {fileID: 1540396805}
   - component: {fileID: 1540396804}
   - component: {fileID: 1540396803}
+  - component: {fileID: 1540396806}
   m_Layer: 0
   m_Name: Car
   m_TagString: Untagged
@@ -1131,6 +1146,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1540396801}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1540396806
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1540396801}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bfe560d751d854743937a25fdeaa0ddc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sound: "\xA1Brum, brum!"
 --- !u!1 &1706629680
 GameObject:
   m_ObjectHideFlags: 0
