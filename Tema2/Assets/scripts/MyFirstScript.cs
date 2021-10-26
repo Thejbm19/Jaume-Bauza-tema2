@@ -26,20 +26,24 @@ public class MyFirstScript : MonoBehaviour
     // Start is called before the first frame update
 
     public string hello;
+    public int Number1;
+    public int Number2;
 
     void Start()
     {
-        HelloWorld();
+        Debug.Log(Multiply(Number1, Number2));
+
+       // HelloWorld();
         
-        hello = GetHello();
-        Debug.Log(hello);
+       // hello = GetHello();
+       // Debug.Log(hello);
 
        // Debug.Log(GetHello());
 
        // primer eje x segon eje y i tercer eje z
        // transform.position = new Vector3(0,0,0);
-        transform.position = Vector3.one;
-        Debug.Log(transform.position);
+       // transform.position = Vector3.one;
+       // Debug.Log(transform.position);
         
         /*if (isRaining == true)
         {   
@@ -104,43 +108,25 @@ public class MyFirstScript : MonoBehaviour
     {
         //Debug.Log(transform.position);
         // linies per moure es GameObject
-        if (Input.GetKeyDown(KeyCode.D))
-        {
-            transform.position += Vector3.right;
-        }
+        MovementToDirection(KeyCode.D, Vector3.right);
+        MovementToDirection(KeyCode.A, Vector3.left);
+        MovementToDirection(KeyCode.W, Vector3.forward);
+        MovementToDirection(KeyCode.S, Vector3.back);
+        MovementToDirection(KeyCode.Q, Vector3.down);
+        MovementToDirection(KeyCode.E, Vector3.up);
 
-        if (Input.GetKeyDown(KeyCode.A))
-        {
-            transform.position += Vector3.left;
-            // transform.position += -1 * Vector3.right;
-        }
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            transform.position += Vector3.up;
-        }
-        if (Input.GetKeyDown(KeyCode.Q))
-        {
-            transform.position += Vector3.down;
-        }
+        ScaleToDirection(KeyCode.R, Vector3.right);
+        ScaleToDirection(KeyCode.T, Vector3.left);
+        ScaleToDirection(KeyCode.Y, Vector3.up);
+        ScaleToDirection(KeyCode.U, Vector3.down);
 
-        if (Input.GetKeyDown(KeyCode.W))
-        {
-            transform.position += Vector3.forward;
-        }
-        if (Input.GetKeyDown(KeyCode.S))
-        {
-            transform.position += Vector3.back;
-        }
+        RotationToDirection(KeyCode.RightArrow, new Vector3( 0, 10, 0 ));
+        RotationToDirection(KeyCode.LeftArrow, new Vector3(0, -10, 0));
 
-        if (Input.GetKeyDown(KeyCode.RightArrow))
-        {
-            transform.rotation *= Quaternion.Euler(0, 10, 0);
-        }
 
-        if (Input.GetKeyDown(KeyCode.LeftArrow))
-        {
-            transform.rotation *= Quaternion.Euler(0, -10, 0);
-        }
+
+
+        
 
         if (Input.GetKeyDown(KeyCode.UpArrow))
         {
@@ -167,5 +153,36 @@ public class MyFirstScript : MonoBehaviour
     public string GetHello()
     {
         return "Hola";
+    }
+
+    public void MovementToDirection(KeyCode key, Vector3 direction)
+    {
+        if (Input.GetKeyDown(key))
+        {
+            transform.position += direction;
+        }
+    }
+
+    public void ScaleToDirection(KeyCode llave, Vector3 direccion)
+    {
+        if (Input.GetKeyDown(llave))
+        {
+            transform.localScale += direccion;
+        }
+    }
+
+    public void RotationToDirection(KeyCode key, Vector3 axis)
+    {
+        if (Input.GetKeyDown(key))
+        {
+            transform.rotation *= Quaternion.Euler(axis);
+        }
+    }
+
+    public int Multiply( int PrimerNumero,int SegundoNumero)
+    {
+        int Result = PrimerNumero * SegundoNumero;
+        Debug.Log($"{PrimerNumero} * {SegundoNumero} = {Result}");
+        return Result;
     }
 }

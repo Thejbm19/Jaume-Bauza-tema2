@@ -331,9 +331,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f7994e0c8e8f2f4c997aa3b43a4f137, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerAge: 35
-  x: 2
-  y: 5
+  hello: 
+  Number1: 10
+  Number2: 5
 --- !u!65 &1243363832
 BoxCollider:
   m_ObjectHideFlags: 0
