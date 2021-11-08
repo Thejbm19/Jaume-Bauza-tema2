@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/PatataCaliente.unity
+    guid: 3ab15fd66199d5145b3c1a275c143afa
   m_configObjects: {}
